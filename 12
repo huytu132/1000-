@@ -1,0 +1,13 @@
+int POW(int x,int n){
+	if(n==1)return x;
+	else
+	return x*POW(x,n-1);
+}
+int Sum(int x,int n){
+	int sum=0;
+	for(int i=1;i<=n;i++){
+		sum+=POW(x,i);
+	}
+	return sum;
+}
+//Calculate sum of S=x+x^2+...+x^n
