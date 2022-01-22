@@ -1,0 +1,13 @@
+int Factorial(int n){
+	if(n==1)return 1;
+	else
+	return n*Factorial(n-1);
+}
+int Sum(int n){
+	int sum=0;
+	for(int i=1;i<=n;i++){
+		sum+=Factorial(i);
+	}
+	return sum;
+}
+//Calculate sum of S=1+1*2+1*2*3+...+1*2*3...*n
