@@ -1,0 +1,6 @@
+int POW(int x,int n){
+	if(n==1)return x;
+	else
+	return x*POW(x,n-1);
+}
+//Calculate P=x^n
