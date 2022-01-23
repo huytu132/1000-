@@ -1,0 +1,16 @@
+int Sum_From_1_To_n(int n){
+	if(n==1)return 1;
+	else 
+	return n+Sum_From_1_To_n(n-1);
+}
+int POW(int x,int n){
+	if(n==1)return x;
+	else
+	return x*POW(x,n-1);
+}
+double Sum_Of_S(int x,int n){
+	if(n==1)return x;
+	else 
+	return POW(x,n)*1.0/Sum_From_1_To_n(n)+Sum_Of_S(x,n-1);
+}
+//Calculate sum of S=x+x^2/(1+2)+...+x^n/(1+2+3+...+n)
