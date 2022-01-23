@@ -1,0 +1,18 @@
+int Factorial(int n){
+	if(n==1)return 1;
+	else 
+	return n*Factorial(n-1);
+}
+
+int POW(int x,int n){
+	if(n==1)return x;
+	else
+	return x*POW(x,n-1);
+}
+
+double Sum_Of_S(int x,int n){
+	if(n==0)return 1+x;
+	else 
+	return POW(x,2*n+1)*1.0/Factorial(2*n+1)+Sum_Of_S(x,n-1);
+}
+//Calculate sum of S=1+x+x^3/3!+...+x^(2n+1)/(2n+1)!
